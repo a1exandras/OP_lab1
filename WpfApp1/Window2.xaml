@@ -1,0 +1,89 @@
+﻿<Window x:Class="WpfApp1.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Window2" Height="600" Width="450">
+
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Margin" Value="1"/>
+            <Setter Property="FontSize" Value="40pt"/>
+            <EventSetter Event="Click" Handler="userClick"/>
+        </Style>
+    </Window.Resources>
+    
+    <Grid Background="#000000">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1" Background="#5f5f5f">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="quitButton" Content="To Main Window" Click="quitButton_Click" Margin="25" Background="IndianRed" FontSize="15pt"/>
+            <Button Grid.Column="1" x:Name="restartButton" Content="Restart" Click="restartButton_Click" Margin="25" Background="ForestGreen" FontSize="15pt"/>
+        </Grid>
+
+        <Grid x:Name="playField">
+
+            
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Button Tag="0,0" x:Name="Button1"/>
+            <Button Tag="0,1" Grid.Column="1" x:Name="Button2"/>
+            <Button Tag="0,2" Grid.Column="2" x:Name="Button3"/>
+            <Button Tag="0,3" Grid.Column="3" x:Name="Button4"/>
+            <Button Tag="0,4" Grid.Column="4" x:Name="Button5"/>
+
+            <Button Tag="1,0" Grid.Row="1" x:Name="Button6"/>
+            <Button Tag="1,1" Grid.Row="1" Grid.Column="1" x:Name="Button7"/>
+            <Button Tag="1,2" Grid.Row="1" Grid.Column="2" x:Name="Button8"/>
+            <Button Tag="1,3" Grid.Row="1" Grid.Column="3" x:Name="Button9"/>
+            <Button Tag="1,4" Grid.Row="1" Grid.Column="4" x:Name="Button10"/>
+
+            <Button Tag="2,0" Grid.Row="2" x:Name="Button11"/>
+            <Button Tag="2,1" Grid.Row="2" Grid.Column="1" x:Name="Button12"/>
+            <Button Tag="2,2" Grid.Row="2" Grid.Column="2" x:Name="Button13"/>
+            <Button Tag="2,3" Grid.Row="2" Grid.Column="3" x:Name="Button14"/>
+            <Button Tag="2,4" Grid.Row="2" Grid.Column="4" x:Name="Button15"/>
+
+            <Button Tag="3,0" Grid.Row="3" x:Name="Button16"/>
+            <Button Tag="3,1" Grid.Row="3" Grid.Column="1" x:Name="Button17"/>
+            <Button Tag="3,2" Grid.Row="3" Grid.Column="2" x:Name="Button18"/>
+            <Button Tag="3,3" Grid.Row="3" Grid.Column="3" x:Name="Button19"/>
+            <Button Tag="3,4" Grid.Row="3" Grid.Column="4" x:Name="Button20"/>
+
+            <Button Tag="4,0" Grid.Row="4" x:Name="Button21"/>
+            <Button Tag="4,1" Grid.Row="4" Grid.Column="1" x:Name="Button22"/>
+            <Button Tag="4,2" Grid.Row="4" Grid.Column="2" x:Name="Button23"/>
+            <Button Tag="4,3" Grid.Row="4" Grid.Column="3" x:Name="Button24"/>
+            <Button Tag="4,4" Grid.Row="4" Grid.Column="4" x:Name="Button25"/>
+        </Grid>
+
+        <TextBlock x:Name="winWindow" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40pt" FontWeight="Bold" Background="LightBlue" Visibility="Collapsed"></TextBlock>
+
+    </Grid>
+</Window>
